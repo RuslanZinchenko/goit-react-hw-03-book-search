@@ -2,3 +2,15 @@
   float: left;
   margin-right: 10px;
 }
+
+.title {
+  font-size: 18px;
+  color: rgb(82, 15, 15);
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000;
+  display: inline;
+}

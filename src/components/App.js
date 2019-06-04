@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import Spinner from 'react-spinkit';
 import BookList from './BookList/BookList ';
-import Loader from './Loader/Loader';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
 import SearchForm from './SearchForm/SearchForm';
-import CategorySelector from './CategorySelector';
+// import CategorySelector from './CategorySelector';
+// import genres from '../genres.json';
 import * as articleAPI from '../services/article-api';
 import styles from '../styles.css';
+
+const spinnerStyles = {
+  position: 'fixed',
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%)',
+};
 
 const mapper = articles => {
   return articles.map(({ id, volumeInfo: info }) => ({
@@ -55,13 +63,20 @@ export default class App extends Component {
     return (
       <div className={styles.container}>
         <SearchForm onSubmit={this.fetchArticles} />
-        <CategorySelector
-          options={['html', 'css', 'javascript', 'react']}
+        {/* <CategorySelector
+          options={genres}
           value={category}
           onChange={this.handleCategoryChange}
-        />
+        /> */}
         {error && <ErrorNotification text={error.message} />}
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Spinner
+            name="line-spin-fade-loader"
+            color="steelblue"
+            fadeIn="none"
+            style={spinnerStyles}
+          />
+        )}
         {articles.length > 0 && <BookList items={articles} />}
       </div>
     );

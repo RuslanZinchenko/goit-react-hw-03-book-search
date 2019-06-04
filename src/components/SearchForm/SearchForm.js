@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+// import CategorySelector from './CategorySelector';
+import genres from '../../genres.json';
 import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
-  state = { query: '' };
+  state = { query: '', genders: '' };
 
   handleChange = e => {
     this.setState({
@@ -10,16 +12,22 @@ export default class SearchForm extends Component {
     });
   };
 
+  handleCategory = e => {
+    this.setState({ genders: e.target.value });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     /* eslint-disable-next-line */
     this.props.onSubmit(this.state.query);
-
-    this.setState({ query: '' });
+    // this.props.onChange(this.state.genders);
+    console.log(this.state.genders);
+    this.setState({ query: '', category: '' });
   };
 
   render() {
-    const { query } = this.state;
+    const { query, genders } = this.state;
+
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
         <input
@@ -29,7 +37,14 @@ export default class SearchForm extends Component {
           placeholder="Enter a name of book..."
           onChange={this.handleChange}
         />
-        <button className={styles.button} type="submit">
+        <select value={genders} onChange={this.handleCategory}>
+          {genres.map(item => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+        <button className={styles.buttonSearch} type="submit">
           Search
         </button>
       </form>

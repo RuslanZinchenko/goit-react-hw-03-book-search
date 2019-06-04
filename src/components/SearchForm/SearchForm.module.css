@@ -1,10 +1,8 @@
 .form {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   padding: 20px;
-  background: rgb(245, 220, 220);
-  box-shadow: 0px 0px 104px -50px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(to left, #f1f5187e, #9198e57a);
 }
 
 .input {
@@ -13,7 +11,7 @@
   padding: 10px;
 }
 
-.button {
+.buttonSearch {
   width: 30%;
   height: auto;
   padding: 10px;

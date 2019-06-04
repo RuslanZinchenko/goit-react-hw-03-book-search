@@ -11,9 +11,9 @@ const BookListItem = ({ imageLinks, title, description, previewLink }) => (
         className={styles.avatar}
         width="100"
       />
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.description}>{description}</p>
     </a>
-    <h2>{title}</h2>
-    <p>{description}</p>
   </div>
 );
 BookListItem.propTypes = {
