@@ -3,8 +3,6 @@ import Spinner from 'react-spinkit';
 import BookList from './BookList/BookList ';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
 import SearchForm from './SearchForm/SearchForm';
-// import CategorySelector from './CategorySelector';
-// import genres from '../genres.json';
 import * as articleAPI from '../services/article-api';
 import styles from '../styles.css';
 
@@ -27,21 +25,11 @@ export default class App extends Component {
     articles: [],
     isLoading: false,
     error: null,
-    // category: '',
   };
 
   componentDidMount() {
     this.fetchArticles();
   }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   const { category: prevCategory } = prevState;
-  //   const { category: nextCategory } = this.state;
-
-  //   if (prevCategory !== nextCategory) {
-  //     this.fetchArticles(nextCategory);
-  //   }
-  // }
 
   fetchArticles = (query, category) => {
     this.setState({ isLoading: true });
@@ -53,21 +41,12 @@ export default class App extends Component {
       .finally(() => this.setState({ isLoading: false }));
   };
 
-  // handleCategoryChange = e => {
-  //   this.setState({ category: e.target.value });
-  // };
-
   render() {
     const { articles, isLoading, error } = this.state;
 
     return (
       <div className={styles.container}>
         <SearchForm onSubmit={this.fetchArticles} />
-        {/* <CategorySelector
-          options={genres}
-          value={category}
-          onChange={this.handleCategoryChange}
-        /> */}
         {error && <ErrorNotification text={error.message} />}
         {isLoading && (
           <Spinner

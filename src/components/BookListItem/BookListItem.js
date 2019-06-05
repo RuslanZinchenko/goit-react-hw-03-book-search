@@ -10,6 +10,8 @@ const BookListItem = ({
   authors,
   publisher,
   publishedDate,
+  pageCount,
+  rating,
 }) => (
   <div>
     <a href={previewLink} target="_blank" rel="noopener noreferrer">
@@ -20,14 +22,13 @@ const BookListItem = ({
         width="100"
       />
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.publisher}>
-        Authors:{' '}
-        {authors.map(i => (
-          <p>{i}</p>
-        ))}
-      </p>
-      <p className={styles.publisher}>Publisher: "{publisher}"</p>
-      <p className={styles.publisher}>Published date: {publishedDate}</p>
+      <div className={styles.publishInfo}>
+        <p className={styles.publisher}>Authors: {authors}</p>
+        <p className={styles.publisher}>Publisher: {publisher}</p>
+        <p className={styles.publisher}>Published date: {publishedDate}</p>
+        <p className={styles.publisher}>Page count: {pageCount}</p>
+        <p className={styles.publisher}>Rating - {rating}</p>
+      </div>
       <p className={styles.description}>{description}</p>
     </a>
   </div>
@@ -37,8 +38,11 @@ BookListItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   previewLink: PropTypes.string.isRequired,
+  authors: PropTypes.string.isRequired,
   publisher: PropTypes.string.isRequired,
-  publisherDate: PropTypes.string.isRequired,
+  publishedDate: PropTypes.string.isRequired,
+  pageCount: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
 };
 
 export default BookListItem;

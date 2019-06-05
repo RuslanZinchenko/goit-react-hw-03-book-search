@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 import CategorySelector from '../CategorySelector/CategorySelector';
 import genres from '../../genres.json';
 import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
+  // static.propTypes = {
+  //   onSubmit: PropTypes.func.isRequired,
+  // };
+
   state = {
     query: '',
     category: '',
@@ -21,8 +26,8 @@ export default class SearchForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    /* eslint-disable-next-line */
     const { query, category } = this.state;
+    /* eslint-disable-next-line */
     this.props.onSubmit(query, category);
   };
 
@@ -38,21 +43,12 @@ export default class SearchForm extends Component {
           placeholder="Enter a name of book..."
           onChange={this.handleQueryChange}
         />
-        {/* <select value={category} onChange={this.handleCategory}>
-          {genres.map(item => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select> */}
         <CategorySelector
           options={genres}
           value={category}
           onChange={this.handleCategoryChange}
         />
-        <button className={styles.buttonSearch} type="submit">
-          Search
-        </button>
+        <button className={styles.buttonSearch} type="submit" />
       </form>
     );
   }
