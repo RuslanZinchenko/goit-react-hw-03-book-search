@@ -27,38 +27,38 @@ export default class App extends Component {
     articles: [],
     isLoading: false,
     error: null,
-    category: '',
+    // category: '',
   };
 
   componentDidMount() {
     this.fetchArticles();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const { category: prevCategory } = prevState;
-    const { category: nextCategory } = this.state;
+  // componentDidUpdate(prevProps, prevState) {
+  //   const { category: prevCategory } = prevState;
+  //   const { category: nextCategory } = this.state;
 
-    if (prevCategory !== nextCategory) {
-      this.fetchArticles(nextCategory);
-    }
-  }
+  //   if (prevCategory !== nextCategory) {
+  //     this.fetchArticles(nextCategory);
+  //   }
+  // }
 
-  fetchArticles = query => {
+  fetchArticles = (query, category) => {
     this.setState({ isLoading: true });
 
     articleAPI
-      .fetchArticles(query)
+      .fetchArticles(query, category)
       .then(({ data }) => this.setState({ articles: mapper(data.items) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   };
 
-  handleCategoryChange = e => {
-    this.setState({ category: e.target.value });
-  };
+  // handleCategoryChange = e => {
+  //   this.setState({ category: e.target.value });
+  // };
 
   render() {
-    const { articles, isLoading, error, category } = this.state;
+    const { articles, isLoading, error } = this.state;
 
     return (
       <div className={styles.container}>
