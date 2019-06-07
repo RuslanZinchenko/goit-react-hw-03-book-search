@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import CategorySelector from '../CategorySelector/CategorySelector';
 import genres from '../../genres.json';
 import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
-  // static.propTypes = {
-  //   onSubmit: PropTypes.func.isRequired,
-  // };
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
 
   state = {
     query: '',

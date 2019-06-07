@@ -33,16 +33,29 @@ const BookListItem = ({
     </a>
   </div>
 );
+
+BookListItem.defaultProps = {
+  imageLinks: 'image',
+  title: 'title',
+  description: 'description',
+  previewLink: 'previewLink',
+  authors: 'authors',
+  publisher: 'publisher',
+  publishedDate: 'published date',
+  pageCount: 'page count',
+  rating: 'rating',
+};
+
 BookListItem.propTypes = {
-  imageLinks: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  previewLink: PropTypes.string.isRequired,
-  authors: PropTypes.string.isRequired,
-  publisher: PropTypes.string.isRequired,
-  publishedDate: PropTypes.string.isRequired,
-  pageCount: PropTypes.string.isRequired,
-  rating: PropTypes.string.isRequired,
+  imageLinks: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  previewLink: PropTypes.string,
+  authors: PropTypes.string,
+  publisher: PropTypes.string,
+  publishedDate: PropTypes.string,
+  pageCount: PropTypes.string,
+  rating: PropTypes.string,
 };
 
 export default BookListItem;

@@ -1,1 +1,10 @@
-["fantasy", "thriller", "drama", "mystery", "horror", "satire", "computers"]
+[
+  "------ Choose your genre ------",
+  "fantasy",
+  "thriller",
+  "drama",
+  "mystery",
+  "horror",
+  "satire",
+  "computers"
+]
