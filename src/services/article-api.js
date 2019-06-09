@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://www.googleapis.com/books/v2/volumes?q=';
+const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 
 /* eslint-disable-next-line */
 export const fetchArticles = (query = 'react', category = 'computers') =>
