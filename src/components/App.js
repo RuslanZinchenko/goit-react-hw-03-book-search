@@ -3,7 +3,7 @@ import Spinner from 'react-spinkit';
 import BookList from './BookList/BookList ';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
 import SearchForm from './SearchForm/SearchForm';
-import * as articleAPI from '../services/article-api';
+import * as ArticleAPI from '../services/article-api';
 import styles from '../styles.css';
 
 const spinnerStyles = {
@@ -34,8 +34,7 @@ export default class App extends Component {
   fetchArticles = (query, category) => {
     this.setState({ isLoading: true });
 
-    articleAPI
-      .fetchArticles(query, category)
+    ArticleAPI.fetchArticles(query, category)
       .then(({ data }) => this.setState({ articles: mapper(data.items) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
