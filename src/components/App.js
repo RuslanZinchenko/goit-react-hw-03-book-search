@@ -27,9 +27,9 @@ export default class App extends Component {
     error: null,
   };
 
-  componentDidMount() {
-    this.fetchArticles();
-  }
+//   componentDidMount() {
+//     this.fetchArticles();
+//   }
 
   fetchArticles = (query, category) => {
     this.setState({ isLoading: true });
