@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CategorySelector from '../CategorySelector/CategorySelector';
-import genres from '../../genres.json';
 import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
@@ -11,7 +9,6 @@ export default class SearchForm extends Component {
 
   state = {
     query: '',
-    category: '',
   };
 
   handleQueryChange = e => {
@@ -20,19 +17,15 @@ export default class SearchForm extends Component {
     });
   };
 
-  handleCategoryChange = e => {
-    this.setState({ category: e.target.value });
-  };
-
   handleSubmit = e => {
     e.preventDefault();
-    const { query, category } = this.state;
+    const { query } = this.state;
     /* eslint-disable-next-line */
-    this.props.onSubmit(query, category);
+    this.props.onSubmit(query);
   };
 
   render() {
-    const { query, category } = this.state;
+    const { query } = this.state;
 
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
@@ -42,11 +35,6 @@ export default class SearchForm extends Component {
           value={query}
           placeholder="Enter a name of book..."
           onChange={this.handleQueryChange}
-        />
-        <CategorySelector
-          options={genres}
-          value={category}
-          onChange={this.handleCategoryChange}
         />
         <button className={styles.buttonSearch} type="submit" />
       </form>
