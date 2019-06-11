@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-03-book-search/static/css/main.e964fecc.chunk.css",
-    "main.js": "/goit-react-hw-03-book-search/static/js/main.036ed528.chunk.js",
-    "main.js.map": "/goit-react-hw-03-book-search/static/js/main.036ed528.chunk.js.map",
+    "main.css": "/goit-react-hw-03-book-search/static/css/main.c8758581.chunk.css",
+    "main.js": "/goit-react-hw-03-book-search/static/js/main.dbd5742a.chunk.js",
+    "main.js.map": "/goit-react-hw-03-book-search/static/js/main.dbd5742a.chunk.js.map",
     "runtime~main.js": "/goit-react-hw-03-book-search/static/js/runtime~main.5d5bdee0.js",
     "runtime~main.js.map": "/goit-react-hw-03-book-search/static/js/runtime~main.5d5bdee0.js.map",
     "static/css/2.6a7e1099.chunk.css": "/goit-react-hw-03-book-search/static/css/2.6a7e1099.chunk.css",
     "static/js/2.ab240b3c.chunk.js": "/goit-react-hw-03-book-search/static/js/2.ab240b3c.chunk.js",
     "static/js/2.ab240b3c.chunk.js.map": "/goit-react-hw-03-book-search/static/js/2.ab240b3c.chunk.js.map",
     "index.html": "/goit-react-hw-03-book-search/index.html",
-    "precache-manifest.7734a6b74ed0c42526adef4646620c18.js": "/goit-react-hw-03-book-search/precache-manifest.7734a6b74ed0c42526adef4646620c18.js",
+    "precache-manifest.515dec7bf8c8ea7f68d9b148f1dfb1da.js": "/goit-react-hw-03-book-search/precache-manifest.515dec7bf8c8ea7f68d9b148f1dfb1da.js",
     "service-worker.js": "/goit-react-hw-03-book-search/service-worker.js",
     "static/css/2.6a7e1099.chunk.css.map": "/goit-react-hw-03-book-search/static/css/2.6a7e1099.chunk.css.map",
-    "static/css/main.e964fecc.chunk.css.map": "/goit-react-hw-03-book-search/static/css/main.e964fecc.chunk.css.map",
+    "static/css/main.c8758581.chunk.css.map": "/goit-react-hw-03-book-search/static/css/main.c8758581.chunk.css.map",
     "static/media/SearchForm.module.css": "/goit-react-hw-03-book-search/static/media/button.febb2df2.png"
   }
 }
