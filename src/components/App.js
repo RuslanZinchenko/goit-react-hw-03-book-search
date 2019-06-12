@@ -27,6 +27,7 @@ export default class App extends Component {
     articles: [],
     isLoading: false,
     error: null,
+    category: '',
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -38,25 +39,27 @@ export default class App extends Component {
     }
   }
 
-  fetchArticles = (query, category) => {
+  fetchArticles = query => {
     this.setState({ isLoading: true });
 
-    ArticleAPI.fetchArticles(query, category)
+    ArticleAPI.fetchArticles(query)
       .then(({ data }) => this.setState({ articles: mapper(data.items) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   };
 
   handleCategoryChange = e => {
-    this.setState({ category: e.target.value });
+    this.setState({ category: e.target.value, error: null });
   };
+
+  handleClear = () => this.setState({ articles: [], error: null });
 
   render() {
     const { articles, isLoading, error, category } = this.state;
 
     return (
       <div className={styles.container}>
-        <SearchForm onSubmit={this.fetchArticles} />
+        <SearchForm onSubmit={this.fetchArticles} onClear={this.handleClear} />
         <CategorySelector
           options={genres}
           value={category}

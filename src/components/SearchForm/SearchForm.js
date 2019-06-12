@@ -5,10 +5,12 @@ import styles from './SearchForm.module.css';
 export default class SearchForm extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
+    onClear: PropTypes.func.isRequired,
   };
 
   state = {
     query: '',
+    error: null,
   };
 
   handleQueryChange = e => {
@@ -19,9 +21,10 @@ export default class SearchForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { query } = this.state;
-    /* eslint-disable-next-line */
-    this.props.onSubmit(query);
+    const { query, error } = this.state;
+    const { onSubmit, onClear } = this.props;
+    onSubmit(query);
+    onClear(error);
   };
 
   render() {
