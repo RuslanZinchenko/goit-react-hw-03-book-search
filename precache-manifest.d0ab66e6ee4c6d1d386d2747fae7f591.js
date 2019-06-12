@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52798eca7e8ca2472d80bcc93441cb59",
+    "revision": "44fbfdcbc49bbf581aef707084b03ac2",
     "url": "/goit-react-hw-03-book-search/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goit-react-hw-03-book-search/static/css/2.6a7e1099.chunk.css"
   },
   {
-    "revision": "495759e1ba9123fc1f62",
-    "url": "/goit-react-hw-03-book-search/static/css/main.c8758581.chunk.css"
+    "revision": "f1a4d12d4cf7c7682637",
+    "url": "/goit-react-hw-03-book-search/static/css/main.6660723e.chunk.css"
   },
   {
     "revision": "bb6ca54d80fd33d315c5",
     "url": "/goit-react-hw-03-book-search/static/js/2.ab240b3c.chunk.js"
   },
   {
-    "revision": "495759e1ba9123fc1f62",
-    "url": "/goit-react-hw-03-book-search/static/js/main.dbd5742a.chunk.js"
+    "revision": "f1a4d12d4cf7c7682637",
+    "url": "/goit-react-hw-03-book-search/static/js/main.a9c0d6ce.chunk.js"
   },
   {
     "revision": "94506de2c381820c5c24",
