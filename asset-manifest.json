@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-03-book-search/static/css/main.6660723e.chunk.css",
-    "main.js": "/goit-react-hw-03-book-search/static/js/main.a9c0d6ce.chunk.js",
-    "main.js.map": "/goit-react-hw-03-book-search/static/js/main.a9c0d6ce.chunk.js.map",
+    "main.css": "/goit-react-hw-03-book-search/static/css/main.49e33ae1.chunk.css",
+    "main.js": "/goit-react-hw-03-book-search/static/js/main.55571b65.chunk.js",
+    "main.js.map": "/goit-react-hw-03-book-search/static/js/main.55571b65.chunk.js.map",
     "runtime~main.js": "/goit-react-hw-03-book-search/static/js/runtime~main.5d5bdee0.js",
     "runtime~main.js.map": "/goit-react-hw-03-book-search/static/js/runtime~main.5d5bdee0.js.map",
-    "static/css/2.6a7e1099.chunk.css": "/goit-react-hw-03-book-search/static/css/2.6a7e1099.chunk.css",
-    "static/js/2.ab240b3c.chunk.js": "/goit-react-hw-03-book-search/static/js/2.ab240b3c.chunk.js",
-    "static/js/2.ab240b3c.chunk.js.map": "/goit-react-hw-03-book-search/static/js/2.ab240b3c.chunk.js.map",
+    "static/css/2.c490578a.chunk.css": "/goit-react-hw-03-book-search/static/css/2.c490578a.chunk.css",
+    "static/js/2.1a8f0f71.chunk.js": "/goit-react-hw-03-book-search/static/js/2.1a8f0f71.chunk.js",
+    "static/js/2.1a8f0f71.chunk.js.map": "/goit-react-hw-03-book-search/static/js/2.1a8f0f71.chunk.js.map",
     "index.html": "/goit-react-hw-03-book-search/index.html",
-    "precache-manifest.d0ab66e6ee4c6d1d386d2747fae7f591.js": "/goit-react-hw-03-book-search/precache-manifest.d0ab66e6ee4c6d1d386d2747fae7f591.js",
+    "precache-manifest.83f2b1a5d28273746305519f29a4ce03.js": "/goit-react-hw-03-book-search/precache-manifest.83f2b1a5d28273746305519f29a4ce03.js",
     "service-worker.js": "/goit-react-hw-03-book-search/service-worker.js",
-    "static/css/2.6a7e1099.chunk.css.map": "/goit-react-hw-03-book-search/static/css/2.6a7e1099.chunk.css.map",
-    "static/css/main.6660723e.chunk.css.map": "/goit-react-hw-03-book-search/static/css/main.6660723e.chunk.css.map",
+    "static/css/2.c490578a.chunk.css.map": "/goit-react-hw-03-book-search/static/css/2.c490578a.chunk.css.map",
+    "static/css/main.49e33ae1.chunk.css.map": "/goit-react-hw-03-book-search/static/css/main.49e33ae1.chunk.css.map",
     "static/media/SearchForm.module.css": "/goit-react-hw-03-book-search/static/media/button.febb2df2.png"
   }
 }
