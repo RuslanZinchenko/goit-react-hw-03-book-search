@@ -3,8 +3,6 @@ import Spinner from 'react-spinkit';
 import BookList from './BookList/BookList ';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
 import SearchForm from './SearchForm/SearchForm';
-import CategorySelector from './CategorySelector/CategorySelector';
-import genres from '../genres.json';
 import * as ArticleAPI from '../services/article-api';
 import styles from '../styles.css';
 
@@ -27,44 +25,25 @@ export default class App extends Component {
     articles: [],
     isLoading: false,
     error: null,
-    category: '',
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    const { category: prevCategory } = prevState;
-    const { category: nextCategory } = this.state;
-
-    if (prevCategory !== nextCategory) {
-      this.fetchArticles(nextCategory);
-    }
-  }
-
-  fetchArticles = query => {
+  fetchArticles = (query, category) => {
     this.setState({ isLoading: true });
 
-    ArticleAPI.fetchArticles(query)
+    ArticleAPI.fetchArticles(query, category)
       .then(({ data }) => this.setState({ articles: mapper(data.items) }))
       .catch(error => this.setState({ error }))
       .finally(() => this.setState({ isLoading: false }));
   };
 
-  handleCategoryChange = e => {
-    this.setState({ category: e.target.value, error: null });
-  };
-
   handleClear = () => this.setState({ articles: [], error: null });
 
   render() {
-    const { articles, isLoading, error, category } = this.state;
+    const { articles, isLoading, error } = this.state;
 
     return (
       <div className={styles.container}>
         <SearchForm onSubmit={this.fetchArticles} onClear={this.handleClear} />
-        <CategorySelector
-          options={genres}
-          value={category}
-          onChange={this.handleCategoryChange}
-        />
         {error && <ErrorNotification text={error.message} />}
         {isLoading && (
           <Spinner

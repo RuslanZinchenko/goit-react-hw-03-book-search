@@ -10,6 +10,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "react-select": "^3.0.4",
     "react-spinkit": "^3.0.0"
   },
   "homepage": "https://ruslanzinchenko.github.io/goit-react-hw-03-book-search/",
