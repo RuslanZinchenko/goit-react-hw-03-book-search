@@ -47,14 +47,20 @@ BookListItem.defaultProps = {
 };
 
 BookListItem.propTypes = {
-  imageLinks: PropTypes.string,
+  imageLinks: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ thumbnail: PropTypes.string }),
+  ]),
   title: PropTypes.string,
   description: PropTypes.string,
   previewLink: PropTypes.string,
-  authors: PropTypes.string,
+  authors: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
   publisher: PropTypes.string,
   publishedDate: PropTypes.string,
-  pageCount: PropTypes.string,
+  pageCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   rating: PropTypes.string,
 };
 
